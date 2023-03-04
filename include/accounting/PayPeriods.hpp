@@ -71,7 +71,7 @@ enum ePAY_PERIOD
     //! - The last wage payment made during the same calendar year;
     //! - The date employment began, if during the same calendar year; or
     //! - January 1 of the same year.
-    ePayPeriodDaily,
+    ePayPeriodDaily = 360,
 
     //! \brief Weekly Pay Period
     //!
@@ -84,7 +84,7 @@ enum ePAY_PERIOD
     //! Employees receive 52 paychecks per year – one for every week of the year.
     //! Payroll is usually scheduled to run on the same day every week, most often on
     //! Thursday or Friday.
-    ePayPeriodWeekly,
+    ePayPeriodWeekly = 52,
 
     //! \brief Bi-Weekly Pay Period
     //!
@@ -98,7 +98,7 @@ enum ePAY_PERIOD
     //!
     //! \note In some years, a bi-weekly payroll system might result in an additional
     //! pay period and it can result in overpaying employees.
-    ePayPeriodBiweekly,
+    ePayPeriodBiweekly = 26,
 
     //! \brief Semi-Monthly Pay Period
     //!
@@ -109,7 +109,7 @@ enum ePAY_PERIOD
     //! issue checks on the 1st and 15th of the month, or the 15th and the last day
     //! of the month. You do have the option of scheduling recurring payments on any
     //! two dates in a month that are spread equally apart.
-    ePayPeriodSemimonthly,
+    ePayPeriodSemimonthly = 24,
 
     //! \brief Monthly Pay Period
     //!
@@ -118,17 +118,18 @@ enum ePAY_PERIOD
     //!
     //! Employees receive 12 paychecks per year, issued on the same date every month,
     //! usually the first or last day the month.
-    ePayPeriodMonthly,
+    ePayPeriodMonthly = 12,
 
     //! \brief Quarterly Pay Period
     //!
     //! A quarterly pay period results in 4 paychecks a year.
-    ePayPeriodQuarterly,
+    ePayPeriodQuarterly = 4,
 
     //! \brief Semiannual Pay Period
     //!
     //! A semiannual pay period results in 2 paychecks a year.
-    ePayPeriodSemiannually,
+    ePayPeriodSemiannually = 2,
 };
+
 
 #endif

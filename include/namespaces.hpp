@@ -36,6 +36,9 @@ namespace transportation
 //! \brief Accounting
 //! This namespace contains formulas, enumerations, constants, and
 //! inline code relating to accounting processes.
+//!
+//! More specifically, this namespace contains code to calculate payroll taxes,
+//! witholding, and otherwise generate payroll checks.
 namespace accounting
 {
 
