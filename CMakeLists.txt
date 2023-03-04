@@ -1,12 +1,17 @@
 # Copyright IO Industrial, LLC. or its affiliates. All Rights Reserved.
-PROJECT(COMMON_TYPES)
-
 cmake_minimum_required (VERSION 3.1)
+
+PROJECT(COMMON_TYPES LANGUAGES CXX)
 
 # 3.12 or higher is strongly suggested; build settings (target_compile_options/etc...) 
 if(CMAKE_VERSION VERSION_LESS 3.12)
     message(WARNING "Building with CMake 3.12 or higher is strongly suggested; current version is ${CMAKE_VERSION}")
 endif()
+
+# CMAKE_MODULE_PATH is a CMAKE variable. It contains a list of paths 
+# which could be used to search CMAKE modules by "include()" or "find_package()", but the default value is empty.
+# Add cmake dir to search list
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 get_filename_component(NATIVE_ROOT "${CMAKE_CURRENT_SOURCE_DIR}" ABSOLUTE)
 message( "NATIVE_ROOT = ${NATIVE_ROOT}")
@@ -34,3 +39,18 @@ else (DOXYGEN_FOUND)
   message("Doxygen need to be installed to generate the doxygen documentation")
 endif (DOXYGEN_FOUND)
 
+#
+# google test
+#
+message("Building google test..")
+add_subdirectory(third-party/googletest)
+
+include_directories(
+    ${CMAKE_CURRENT_LIST_DIR}/include 
+    ${CMAKE_CURRENT_LIST_DIR}/third-party/googletest/googletest/include
+    )
+
+# Enable testing for the project
+enable_testing()
+
+add_subdirectory(unittest)
