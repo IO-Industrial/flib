@@ -1,4 +1,3 @@
-
 //! \file OSADI.hpp
 //! \author Joe Turner <joe@agavemountain.com>
 //!
