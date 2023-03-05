@@ -54,4 +54,48 @@ namespace ioi
 
 };
 
+/*! \mainpage
+
+ \section intro Introduction
+This header-only repository contains common types, structures, equates, defines and 
+specialized template functions.
+
+To put it bluntly, this repository contains code that other code depends on so it 
+isn't a stand alone repository.  We are slowly refactoring and moving code into
+this repository. Use at your own risk.
+
+ \tableofcontents
+
+ \section Requirements
+
+ - Doxygen 1.8.0+ (for markdown support) and GraphViz.
+ - GNU GCC toolchain
+ - Git (obviously)
+
+\section make Building and Installing
+
+ \code
+ $ mkdir build
+ $ cmake ..
+ $ make -j6; make install
+ \endcode
+
+ \section Generating Documentation
+
+ This project uses doxygen to generate the documentation.  To generate
+ this documentation, you must have doxygen installed.  Simple execute doxygen:
+ \code
+ $ make doc
+ \endcode
+
+ \section Running Unit Tests
+
+ You can run unit tests (if cppunit is installed on your development workstation):
+
+ \code
+ $ ctest -V
+ \endcode
+
+*/
+
 #endif
