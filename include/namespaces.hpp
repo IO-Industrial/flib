@@ -26,6 +26,14 @@
 namespace ioi
 {
 
+    //! \brief Time and Date
+    //! This namespace contains code relating to the manipulation of
+    //! time and dates.
+    namespace time
+    {
+
+    }
+
     //! \brief Transporation
     //! This namespace contains formulas, enumerations, constants, and
     //! inline code relating to transportation processes.
