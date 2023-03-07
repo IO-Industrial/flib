@@ -52,12 +52,26 @@ namespace ioi
     {
 
         //! \brief Payroll
-        //! This namespace contains formuulas, enumerations, constants, and
+        //! This namespace contains formulas, enumerations, constants, and
         //! inline code relating to payroll operations.
         namespace payroll
         {
 
         }
+    }
+
+    //! \brief Utility functions
+    namespace utility
+    {
+
+    }
+
+    //! \brief Design patterns
+    //! This namespace contains templates, abstract base classes, interfaces,
+    //! and reusable design pattern implementations. 
+    namespace patterns
+    {
+
     }
 
 };
