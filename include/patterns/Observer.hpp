@@ -27,12 +27,41 @@ namespace ioi
     namespace patterns
     {
 
+        //! \brief Observer Template Class
+        //! Observer is a behavioral design pattern that allows some
+        //! objects to notify other objects about changes in their state.
+        //!
+        //! The Observer pattern provides a way to subscribe and
+        //! unsubscribe to and from these events for any object that
+        //! implements a subscriber interface.
+        //!
+        //! Example:
+        //! \code
+        //! class TemperatureAlarm : public Observer<Temperature>
+        //! {
+        //! public:
+        //!      TemperatureAlarm() {}
+        //!      ~TemperatureAlarm() {}
+        //!      void update (Temperature *subject)
+        //!         {
+        //!         std::cout << "Temperature was changed, sound the alarm"
+        //!               << std::endl;
+        //!         subject->getTemperature();
+        //!        }
+        //!  };
+        //! \endcode
         template <class T>
         class Observer
         {
         public:
+            //! \brief Default constructor
             Observer() {}
+            //! Virtual destructor
             virtual ~Observer() {}
+
+            //! \brief Update 
+            //! This function is called by the subject when an update
+            //! is required.
             virtual void update(T *subject) = 0;
         };
 

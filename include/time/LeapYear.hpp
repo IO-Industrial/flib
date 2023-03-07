@@ -18,20 +18,30 @@
 #ifndef _LEAPYEAR_HPP_
 #define _LEAPYEAR_HPP_
 
-
 namespace ioi
 {
     namespace time
     {
 
-        inline
-        bool isLeapYear(int year)
+        //! \brief Check if supplied year is leap year. 
+        //!
+        //! \param year  Year to check if it is a leap year.
+        //!
+        //! \returns
+        //! \retval true    This is a leap year
+        //! \retval false   This is not a leap yaer.
+        inline bool isLeapYear(int year)
         {
+            bool result = false;
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
+            {
+                result = true;
+            }
 
+            return result;
         }
 
     }
 }
 
 #endif
-

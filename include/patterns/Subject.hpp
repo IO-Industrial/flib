@@ -19,11 +19,14 @@
 #ifndef _OBSERVER_HPP_
 #define _OBSERVER_HPP_
 #include <vector>
+#include "patterns/Observer.hpp"
 
 namespace ioi
 {
     namespace patterns
     {
+        //! \brief Subject
+        //!
         template <class T>
         class Subject
         {
@@ -34,6 +37,10 @@ namespace ioi
             {
                 m_observers.push_back(&observer);
             }
+
+            //! \brief Notify observers
+            //! This function will notify all observers that are 
+            //! registered.
             void notify()
             {
                 std::vector<Observer<T> *>::iterator it;
